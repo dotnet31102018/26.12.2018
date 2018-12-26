@@ -42,6 +42,7 @@
             this.yellowPanel1.Name = "yellowPanel1";
             this.yellowPanel1.Size = new System.Drawing.Size(201, 177);
             this.yellowPanel1.TabIndex = 0;
+            this.yellowPanel1.Click += new System.EventHandler(this.yellowPanel1_Click);
             // 
             // greenPanel3
             // 
@@ -50,6 +51,7 @@
             this.greenPanel3.Name = "greenPanel3";
             this.greenPanel3.Size = new System.Drawing.Size(201, 166);
             this.greenPanel3.TabIndex = 1;
+            this.greenPanel3.Click += new System.EventHandler(this.greenPanel3_Click);
             // 
             // redPanel0
             // 
@@ -58,6 +60,7 @@
             this.redPanel0.Name = "redPanel0";
             this.redPanel0.Size = new System.Drawing.Size(201, 177);
             this.redPanel0.TabIndex = 1;
+            this.redPanel0.Click += new System.EventHandler(this.redPanel0_Click);
             // 
             // bluePanel2
             // 
@@ -66,6 +69,7 @@
             this.bluePanel2.Name = "bluePanel2";
             this.bluePanel2.Size = new System.Drawing.Size(201, 166);
             this.bluePanel2.TabIndex = 2;
+            this.bluePanel2.Click += new System.EventHandler(this.bluePanel2_Click);
             // 
             // startGameBtn
             // 
