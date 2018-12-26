@@ -43,35 +43,31 @@ namespace Simon
             }
 
             new Thread(() =>
-           { 
-               int steps = 1;
-               for (int i = 0; i < steps; i++)
+           {
+
+               switch (colors[0])
                {
-                   switch (colors[i])
-                   {
-                       case 0:
-                           redPanel0.BackColor = pressColor;
-                           break;
-                       case 1:
-                           yellowPanel1.BackColor = pressColor;
-                           break;
-                       case 2:
-                           bluePanel2.BackColor = pressColor;
-                           break;
-                       case 3:
-                           greenPanel3.BackColor = pressColor;
-                           break;
-                   }
-
-                   Thread.Sleep(sleep);
-
-                   redPanel0.BackColor = Color.Red;
-                   yellowPanel1.BackColor = Color.Yellow;
-                   bluePanel2.BackColor = Color.Blue;
-                   greenPanel3.BackColor = Color.Lime;
-
-                   Thread.Sleep(100);
+                   case 0:
+                       redPanel0.BackColor = pressColor;
+                       break;
+                   case 1:
+                       yellowPanel1.BackColor = pressColor;
+                       break;
+                   case 2:
+                       bluePanel2.BackColor = pressColor;
+                       break;
+                   case 3:
+                       greenPanel3.BackColor = pressColor;
+                       break;
                }
+
+               Thread.Sleep(sleep);
+
+               redPanel0.BackColor = Color.Red;
+               yellowPanel1.BackColor = Color.Yellow;
+               bluePanel2.BackColor = Color.Blue;
+               greenPanel3.BackColor = Color.Lime;
+
            }).Start();
            
         }
@@ -79,7 +75,7 @@ namespace Simon
         private void AfterClickColor()
         {
 
-                currentStep++;
+            currentStep++;
             if (currentStep == stepsInRound)
             {
                 if (stepsInRound == MAX)
@@ -91,8 +87,7 @@ namespace Simon
                     stepsInRound++;
                     currentStep = 0;
 
-                    int steps = stepsInRound;
-                    for (int i = 0; i < steps; i++)
+                    for (int i = 0; i < stepsInRound; i++)
                     {
                         switch (colors[i])
                         {
